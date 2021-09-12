@@ -4,7 +4,7 @@ import string
 import random
 
 def hash_preimage(target_string):
-    k = 10
+    k = len(target_string)
     if not all( [x in '01' for x in target_string ] ):
         print( "Input should be a string of bits" )
         return
