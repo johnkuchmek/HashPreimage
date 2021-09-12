@@ -11,10 +11,10 @@ def hash_preimage(target_string):
     nonce = b'\x00'
     
     while True:
-    y = os.urandom(64)
-    wy = hashlib.sha256(y)
-    ybits = ''.join(format(byte, '08b') for byte in wy.digest())
-    if target_string[-k:] == ybits[-k:]:
+      y = os.urandom(64)
+      wy = hashlib.sha256(y)
+      ybits = ''.join(format(byte, '08b') for byte in wy.digest())
+      if target_string[-k:] == ybits[-k:]:
         break
 
     return( ybits )
