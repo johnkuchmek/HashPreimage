@@ -17,4 +17,4 @@ def hash_preimage(target_string):
       if target_string[-k:] == ybits[-k:]:
         break
 
-    return( ybits )
+    return( y )
